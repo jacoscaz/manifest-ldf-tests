@@ -12,6 +12,7 @@
   :simple01
   :vervoersmiddelen02
   :information03
+  :blanknodes01
   ) .
 
 :simple01 rdf:type et:LdfQueryEvaluationTest ;
@@ -43,3 +44,13 @@
     [ et:source <information03/rubenv.ttl> ;
       et:sourceType et:RDFJS ] ) ;
   mf:result  <information03/result.srj> . 
+
+:blanknodes01 rdf:type et:LdfQueryEvaluationTest ;
+  mf:name    "Blank Nodes" ;
+  rdfs:comment "Simple SELECT query" ;
+  mf:action
+        [ qt:query  <simple01.rq> ] ;
+  et:dataSources (
+    [ et:source <blanknodes01/data.ttl> ;
+      et:sourceType et:RDFJS ] ) ;
+  mf:result  <blanknodes01/result.srj> .
